@@ -1,0 +1,39 @@
+#!/bin/zsh
+# ------------------------------------------------------------------
+# Set environment variables    
+# ------------------------------------------------------------------
+rm /etc/zshenv ;
+touch /etc/zshenv ;
+echo "export ADSKFLEX_LICENSE_FILE=@UCALIC" >> /etc/zshenv ;
+echo "export FLEXLM_TIMEOUT=10000000" >> /etc/zshenv ;
+echo "export MAYA_DISABLE_CER=1" >> /etc/zshenv ;
+echo "export MAYA_DISABLE_CIP=1" >> /etc/zshenv ;
+echo "export MAYA_DISABLE_CLIC_IPM=1" >> /etc/zshenv ;
+echo "export foundry_LICENSE=4101@UCALIC" >> /etc/zshenv ;
+echo "export NUKE_PATH=//ucatools/tools" >> /etc/zshenv ;
+echo "export RVL_SERVER=10.8.8.23" >> /etc/zshenv ;
+echo "export redshift_LICENSE=5053@10.8.8.23" >> /etc/zshenv ;
+echo "export genarts_LICENSE=27200@10.8.8.23" >> /etc/zshenv ;
+echo "export neatlab_LICENSE=2019@10.8.8.23" >> /etc/zshenv ;
+echo "export peregrinel_LICENSE=8100@10.8.8.23" >> /etc/zshenv ;
+
+# echo "export MAYA_DISABLE_ADP=1" >> /etc/zshenv ;
+# echo "export MAYA_NO_HOME=1" >> /etc/zshenv ;
+# echo "export MAYA_IP_TYPE=ipv4" >> /etc/zshenv ;
+# echo "export MAYA_ALLOW_OPENGL_REMOTE_SESSION=1" >> /etc/zshenv ;
+# echo "export MAYA_RENDER_SETUP_DISPLAY_RS_NODES=1" >> /etc/zshenv ;
+# echo "export MAYA_ENABLE_LEGACY_VIEWPORT=1" >> /etc/zshenv ;
+# echo "export FOUNDRY_LICENSE_FILE=4101@10.8.8.23" >> /etc/zshenv ;
+# echo "export LMX_LICENSE_PATH=6200@10.8.8.23" >> /etc/zshenv ;
+# echo "export g_additionalModulePath=//ucatools/tools/redshift/Redshift/Plugins/C4D/R26/Redshift" >> /etc/zshenv ;
+# echo "export KEENTOOLS_LICENSE_SERVER=10.8.8.23:7096" >> /etc/zshenv ;
+# echo "export CUDA_CACHE_MAXSIZE=268435456" >> /etc/zshenv ;
+# echo "export REDSHIFT_COREDATAPATH=//ucatools/tools/redshift/Redshift" >> /etc/zshenv ;
+# echo "export REDSHIFT_LOCALDATAPATH=//ucatools/tools/redshift/Redshift" >> /etc/zshenv ;
+# echo "export REDSHIFT_PROCEDURALSPATH=//ucatools/tools/redshift/Redshift" >> /etc/zshenv ;
+# echo "export REDSHIFT_LICENSEPATH=//ucatools/tools/redshift/Redshift" >> /etc/zshenv ;
+# echo "export REDSHIFT_PREFSPATH=//ucatools/tools/redshift/Redshift/preferences.xml" >> /etc/zshenv ;
+# echo "export LICENCE_SERVER_3DE4=10.8.8.23" >> /etc/zshenv ;
+# echo "export lightmap_LICENSE=6001@10.8.8.23" >> /etc/zshenv ;
+
+exit
