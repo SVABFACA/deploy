@@ -1,0 +1,3 @@
+chmod 777 /Applications/Deadline/DeadlineClient-10.1.21.4-osx-installer.app/Contents/Resources/installbuilder
+sleep 2
+sh /Applications/Deadline/DeadlineClient-10.1.21.4-osx-installer.app/Contents/Resources/installbuilder --mode unattended --unattendedmodeui none --connectiontype Direct --setpermissionsclient true --repositorydir "/Volumes/deadlinerepository10" --killprocesses true --licensemode Floating --licenseserver @10.8.8.23 --restartstalled true --slavestartup true
