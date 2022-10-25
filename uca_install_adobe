@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+cd /Applications
+
+#download zip
+curl http://ucahub/Adobe_SDL_AllApps_None_221020_en_US_MACUNIVERSAL.zip --output adobe.zip
+
+unzip /Applications/adobe.zip
+
+sudo installer -pkg /Applications/Adobe_SDL_AllApps_None_221020/Build/Adobe_SDL_AllApps_None_221020_Install.pkg -target /Applications
+
+#cleanup
+rm /Applications/adobe.zip
+rm -r /Applications/Adobe_SDL_AllApps_None_221020/
+
+exit 0
