@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# Disable Avid Link
+
+defaults write /Library/LaunchAgents/com.avid.avidlink.plist RunAtLoad -boolean false
+
+# Copy Helper Application
+
+ditto /Applications/Pro\ Tools.app/Contents/Library/LaunchServices/com.avid.bsd.shoetoolv120 /Library/PrivilegedHelperTools/
+
+# Create / Enable Helper Application Launch Daemon
+
+cat << EOF > /Library/LaunchDaemons/com.avid.bsd.shoetoolv120.plist
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.avid.bsd.shoetoolv120</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.avid.bsd.shoetoolv120</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/Library/PrivilegedHelperTools/com.avid.bsd.shoetoolv120</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/PrivilegedHelperTools/com.avid.bsd.shoetoolv120</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+</dict>
+</plist>
+
+EOF
+
+chmod 644 /Library/LaunchDaemons/com.avid.bsd.shoetoolv120.plist
+chown root:wheel /Library/LaunchDaemons/com.avid.bsd.shoetoolv120.plist
+
+/bin/launchctl load -w /Library/LaunchDaemons/com.avid.bsd.shoetoolv120.plist
+
+
+
+
+
+
+
