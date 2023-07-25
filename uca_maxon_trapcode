@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+cd /Applications
+
+#download zip
+curl http://ucahub/trapcode.zip --output trapcode.zip
+
+unzip /Applications/trapcode.zip
+
+zsh /Applications/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+
+#cleanup
+rm /Applications/trapcode.zip
+rm /Applications/Trapcode\ Suite\ Installer.app
+
+exit 0
