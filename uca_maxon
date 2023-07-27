@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+cd /Applications
+
+#download zip
+curl http://ucahub/maxon.zip --output maxon.zip
+
+unzip /Applications/maxon.zip
+
+#install
+
+zsh /Applications/Maxon\ Cinema\ 4D\ Full\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+zsh /Applications/ZBrush_2023.2_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+zsh /Applications/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Applications/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Applications/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+
+#cleanup
+
+rm -rf /Applications/Maxon\ Cinema\ 4D\ Full\ Installer.app
+rm -rf /Applications/Trapcode\ Suite\ Installer.app
+rm -rf /Applications/Universe\ Installer.app
+rm -rf /Applications/VFX\ Suite\ Installer.app
+rm /Applications/maxon.zip
+
+exit 0
