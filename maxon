@@ -7,7 +7,7 @@ curl http://ucahub/maxonAppInstaller.zip --output maxonAppInstaller.zip
 
 unzip /Applications/maxonAppInstaller.zip
 
-zsh /Applications/Maxon\ App\ Installer.app/Contents/Scripts/install.sh
+zsh /Applications/Maxon\ App\ Installer.app/Contents/Scripts/install.sh  --skipMaxonAppGui
 
 #cleanup
 rm -rf /Applications/Maxon\ App\ Installer.app
