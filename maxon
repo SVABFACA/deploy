@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+cd /Applications
+
+#download zip
+curl http://ucahub/maxonAppInstaller.zip --output maxonAppInstaller.zip
+
+unzip /Applications/maxonAppInstaller.zip
+
+zsh /Applications/Maxon\ App\ Installer.app/Contents/Scripts/install.sh
+
+#cleanup
+rm -rf /Applications/Maxon\ App\ Installer.app
+rm /Applications/maxonAppInstaller.zip
+
+exit 0
