@@ -16,7 +16,7 @@ unzip /Users/Shared/deploy/maxonApp.zip
 
 #install
 
-zsh /Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui --skipMaxonAppGui
+zsh /Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
 #cleanup
 
