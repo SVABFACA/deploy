@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+#install Maxon App
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+
+cd /Users/Shared/deploy
+
+#download DMG
+curl http://ucahub/maxonApp.zip --output maxonApp.zip
+
+#unzip
+
+unzip /Users/Shared/deploy/maxonApp.zip
+
+#install
+
+zsh /Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui --skipMaxonAppGui
+
+#cleanup
+
+rm -rf * /Users/Shared/deploy/
+
+exit 0
