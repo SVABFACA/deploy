@@ -1,25 +1,27 @@
 #!/bin/zsh
 
-#install Maxon App
+#install Maxon Applications
 
 mkdir /Users/Shared/deploy
 chmod 777 /Users/Shared/deploy
-
 cd /Users/Shared/deploy
 
-#download DMG
-curl http://ucahub/maxonApp.zip --output maxonApp.zip
+#download archive
+curl http://ucahub/maxon.zip --output maxon.zip
 
-#unzip
+#unzip archive
 
-unzip /Users/Shared/deploy/maxonApp.zip
+unzip /Users/Shared/deploy/maxon.zip
 
 #install
 
-zsh /Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+zsh /Users/Shared/deploy/ZBrush_2023.2_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+zsh /Users/Shared/deploy/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
 #cleanup
 
-rm -rf * /Users/Shared/deploy/
-
 exit 0
+
