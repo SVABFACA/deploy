@@ -25,3 +25,4 @@ rm -r /Applications/mayaDeploy/
 rm -r /Applications/__MACOSX/
 
 exit 0
+
