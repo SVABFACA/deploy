@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-#install Maxon Applications
+#install Maxon One App
 
 mkdir /Users/Shared/deploy
 chmod 777 /Users/Shared/deploy
