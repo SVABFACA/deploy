@@ -1,7 +1,6 @@
 
 # Autodesk Maya
 
-zsh /Maya\ 2020\ Installer/Install\ Maya\ 2020.app/Contents/Helper/ Setup.app /Contents/MacOS/Setup --q
 zsh /Library/Application\ Support/Autodesk/AdskLicensing/12.0.0.6529/helper/AdskLicensingInstHelper change --prod_key 657O1 --prod_ver 2023.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
 
 # Foundry
