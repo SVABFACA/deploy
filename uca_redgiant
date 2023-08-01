@@ -17,15 +17,14 @@ unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/redgiant
 #install
 
 sleep 5
-zsh /Users/Shared/deploy/maxon/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/maxon/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/maxon/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/redgiant/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/redgiant/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/redgiant/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
 
 #cleanup
 
-rm -rf /Users/Shared/deploy/redgiant
-rm /Users/Shared/deploy/redgiant.zip
+# rm -rf /Users/Shared/deploy/redgiant
+# rm /Users/Shared/deploy/redgiant.zip
 
 exit 0
-
