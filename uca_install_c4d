@@ -1,1 +1,27 @@
-/Users/Shared/deploy/Maxon\ Cinema\ 4D\ Full\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+
+#!/bin/zsh
+
+#install Cinema 4D
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+#download archive
+curl http://ucahub/c4d.zip --output c4d.zip
+
+#unzip archive
+
+unzip /Users/Shared/deploy/c4d.zip
+
+#install
+
+zsh /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+
+#cleanup
+
+rm -rf /Users/Shared/deploy/__MACOSX
+rm -rf /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app
+rm /Users/Shared/deploy/c4d.zip
+
+exit 0
