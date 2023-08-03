@@ -1,28 +1,22 @@
 #!/bin/zsh
 
-cd /Applications
+#install Maya
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
 
 #download zip
-curl http://ucahub/mayaDeploy.zip --output mayaDeploy.zip
+curl http://ucahub/maya.zip --output maya.zip
 
-unzip /Applications/mayaDeploy.zip
+unzip /Users/Shared/deploy/maya.zip
 
-# sudo /Applications/mayaDeploy/Contents/Helper/Setup.app/Contents/MacOS/Setup -i deploy --silent -o /Applications/mayaDeploy/basic_deployment_collection_template.xml
-
-sudo /Applications/mayaDeploy/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
-
-	licensePath="/Library/Application Support/Autodesk/AdskLicensingService/657O1_2023.0.0.F"
-	/bin/mkdir -p "${licensePath}"
-	/usr/bin/touch "${licensePath}/licpath.lic"
-	/bin/echo "SERVER 10.8.8.23 000000000000" > "${licensePath}/licpath.lic"
-	/bin/echo "USE_SERVER" >> "${licensePath}/licpath.lic"
-	
-	/Library/Application\ Support/Autodesk/AdskLicensing/Current/helper/AdskLicensingInstHelper change --pk "657O1" --pv "2023.0.0.F" --lm NETWORK --ls "10.8.8.23"
+sudo /Users/Shared/deploy/maya/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
 
 #cleanup
-rm /Applications/mayaDeploy.zip
-rm -r /Applications/mayaDeploy/
-rm -r /Applications/__MACOSX/
+rm -rf /Users/Shared/deploy/maya 
+rm /Users/Shared/deploy/maya.zip
+rm -r /Users/Shared/deploy/__MACOSX 
 
 exit 0
 
