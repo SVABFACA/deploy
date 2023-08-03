@@ -15,11 +15,11 @@ unzip /Users/Shared/deploy/maxon.zip
 
 #install
 
-zsh /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
-zsh /Users/Shared/deploy/ZBrush_2023.2_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
-zsh /Users/Shared/deploy/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+sudo /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+sudo /Users/Shared/deploy/ZBrush_2023.2_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+sudo /Users/Shared/deploy/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+sudo /Users/Shared/deploy/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+sudo /Users/Shared/deploy/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
 #cleanup
 
