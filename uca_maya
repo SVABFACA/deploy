@@ -7,6 +7,15 @@ chmod 777 /Users/Shared/deploy
 cd /Users/Shared/deploy
 
 #download zip
+
+curl https://emsfs.autodesk.com/utility/odis/1/installer/latest/Darwin.dmg
+
+hdiutil attach Darwin.dmg
+
+sudo /Volumes/Darwin/AdODIS-installer.app/Contents/MacOS/installbuilder.sh --mode unattended
+
+hdiutil detach /Volumes/Darwin 
+
 curl http://ucahub/maya.zip --output maya.zip
 
 unzip /Users/Shared/deploy/maya.zip
