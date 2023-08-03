@@ -26,7 +26,7 @@ echo "HOST ucalic ANY 5053" > /Users/Shared/Maxon/RLM/client.lic
 
 # NeatVideo
 
-echo "SERVER UCALIC ANY 2019" > \NeatVideo5 OFX 64\RLM
+# echo "SERVER UCALIC ANY 2019" > \NeatVideo5 OFX 64\RLM
 
 # Houdini
 
