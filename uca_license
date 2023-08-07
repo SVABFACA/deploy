@@ -32,3 +32,8 @@ echo "HOST ucalic ANY 5053" > /Users/Shared/Maxon/RLM/client.lic
 # Houdini
 
 zsh /Applications/Houdini/Houdini19.5.682/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
+
+# Cinema 4D
+
+sudo rm /Applications/Maxon\ Cinema\ 4D\ 2023/resource/config.txt
+
