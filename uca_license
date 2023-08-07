@@ -15,7 +15,7 @@ echo "HOST ucalic ANY 4101" > /Library/Application\ Support/TheFoundry/rlm/found
 mkdir -p /Library/Application\ Support/GenArts/rlm/
 touch /Library/Application\ Support/GenArts/rlm/mocha_client.lic
 chmod 664 /Library/Application\ Support/GenArts/rlm/mocha_client.lic
-echo "HOST ucalic ANY 27200" > /Library/Application Support/GenArts/rlm/mocha_client.lic
+echo "HOST ucalic ANY 27200" > /Library/Application\ Support/GenArts/rlm/mocha_client.lic
 
 # Maxon One
 
