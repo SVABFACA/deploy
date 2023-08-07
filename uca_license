@@ -3,6 +3,7 @@
 
 sudo /Library/Application\ Support/Autodesk/AdskLicensing/13.0.0.8122/helper/AdskLicensingInstHelper change --prod_key 657P1 --prod_ver 2024.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
 
+
 # Foundry
  
 mkdir -p /Library/Application\ Support/TheFoundry/rlm/
