@@ -1,0 +1,6 @@
+for printer in `lpstat -p | awk '{print $2}'`
+do
+lpadmin -x $printer
+done
+
+sudo lpadmin -p HPofficeJetM651 -D "HP Color LaserJet M651" -v ipp://172.21.8.16/ipp/print -P /Library/Printers/PPDs/Contents/Resources/HP\ Color\ LaserJet\ M651.gz -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -L 2FL -u allow:all -E
