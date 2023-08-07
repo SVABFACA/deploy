@@ -30,5 +30,4 @@ echo "HOST ucalic ANY 5053" > /Users/Shared/Maxon/RLM/client.lic
 
 # Houdini
 
-zsh /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver
 zsh /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
