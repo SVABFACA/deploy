@@ -1,7 +1,7 @@
 
 # Autodesk Maya
 
-zsh /Library/Application\ Support/Autodesk/AdskLicensing/12.0.0.6529/helper/AdskLicensingInstHelper change --prod_key 657O1 --prod_ver 2023.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
+sudo /Library/Application\ Support/Autodesk/AdskLicensing/13.0.0.8122/helper/AdskLicensingInstHelper change --prod_key 657P1 --prod_ver 2024.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
 
 # Foundry
  
@@ -30,4 +30,4 @@ echo "HOST ucalic ANY 5053" > /Users/Shared/Maxon/RLM/client.lic
 
 # Houdini
 
-zsh /Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
+zsh /Applications/Houdini/Houdini19.5.682/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
