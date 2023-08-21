@@ -3,15 +3,15 @@
 cd /Applications
 
 #download zip
-curl http://ucahub/Adobe_SDL_AllApps_SS_Disabled_230526_en_US_MACUNIVERSAL.zip --output adobe.zip
+curl http://ucahub/Adobe_SDL_AllApps_Enable_SS_Only_230817_en_US_MACUNIVERSAL.zip --output adobe.zip
 
 unzip /Applications/adobe.zip
 
 
-sudo installer -pkg /Applications/Adobe_SDL_AllApps_SS_Disabled_220630/Build/Adobe_SDL_AllApps_SS_Disabled_220630_Install.pkg  -target /Applications
+sudo installer -pkg /Applications/Adobe_SDL_AllApps_Enable_SS_Only_230817/Build/Adobe_SDL_AllApps_Enable_SS_Only_230817_Install.pkg -target /Applications
 
 #cleanup
 rm /Applications/adobe.zip
-rm -r /Applications/Adobe_SDL_AllApps_SS_Disabled_220630/
+rm -r /Applications/Adobe_SDL_AllApps_Enable_SS_Only_230817/
 
 exit 0
