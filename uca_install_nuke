@@ -19,14 +19,16 @@ processor_type=$(uname -m)
 
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
-    sudo cp -R /Users/Shared/deploy/intel/Nuke15.1v2 /Applications/
+    sudo cp -R /Users/Shared/deploy/nuke/intel/Nuke15.1v2 /Applications/
 elif [ "$processor_type" == "arm64" ]; then
     echo "Apple Silicon processor detected. Installing Apple Silicon package..."
-    sudo cp -R /Users/Shared/deploy/apple/Nuke15.1v2
+    sudo cp -R /Users/Shared/deploy/nuke/apple/Nuke15.1v2 /Applications/
  else
     echo "Unknown processor type: $processor_type"
     exit 1
 fi
+
+rm -rf /Users/Shared/deploy 
 
 echo "Installation completed."
 exit 0
