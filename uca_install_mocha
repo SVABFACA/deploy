@@ -1,0 +1,23 @@
+#!/bin/zsh
+
+#install Mocha
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+# download package
+
+curl http://ucahub/mocha.zip --output mocha.zip
+
+unzip /Users/Shared/deploy/mocha.zip
+
+# install
+
+cp -R /Users/Shared/deploy/mocha/Mocha\ Pro\ 2024.5.app /Applications/
+sudo installer -pkg /Users/Shared/deploy/mocha/MochaPro2024.5-Adobe.pkg -target /
+sudo installer -pkg /Users/Shared/deploy/mocha/MochaPro2024.5-OFX.pkg -target /
+
+# cleanup
+
+rm -rf /Users/Shared/deploy/
