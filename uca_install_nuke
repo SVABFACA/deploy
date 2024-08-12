@@ -1,0 +1,32 @@
+#!/bin/bash
+
+#install Nuke
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+#download archive
+curl http://ucahub/nuke.zip --output nuke.zip
+
+#unzip archive
+
+unzip /Users/Shared/deploy/nuke.zip
+
+# Determine the processor type
+processor_type=$(uname -m)
+
+
+# Check the processor type and install the appropriate package
+if [ "$processor_type" == "x86_64" ]; then
+    sudo cp -R /Users/Shared/deploy/intel/Nuke15.1v2 /Applications/
+elif [ "$processor_type" == "arm64" ]; then
+    echo "Apple Silicon processor detected. Installing Apple Silicon package..."
+    sudo cp -R /Users/Shared/deploy/apple/Nuke15.1v2
+ else
+    echo "Unknown processor type: $processor_type"
+    exit 1
+fi
+
+echo "Installation completed."
+exit 0
