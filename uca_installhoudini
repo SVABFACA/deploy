@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Determine the processor type
+processor_type=$(uname -m)
+
+# Define the package paths for different architectures
+intel_package="/path/to/intel/package.pkg"
+apple_silicon_package="/path/to/apple_silicon/package.pkg"
+
+# Check the processor type and install the appropriate package
+if [ "$processor_type" == "x86_64" ]; then
+    echo "Intel processor detected. Installing Intel package..."
+    sudo installer -pkg "$intel_package" -target /
+elif [ "$processor_type" == "arm64" ]; then
+    echo "Apple Silicon processor detected. Installing Apple Silicon package..."
+    sudo installer -pkg "$apple_silicon_package" -target /
+else
+    echo "Unknown processor type: $processor_type"
+    exit 1
+fi
+
+echo "Installation completed."
+exit 0
