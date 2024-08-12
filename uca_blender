@@ -36,5 +36,8 @@ else
     exit 1
 fi
 
+rm -rf /Users/Shared/deploy/__MACOSX
+rm -rf /Users/Shared/deploy/blender
+
 echo "Installation completed."
 exit 0
