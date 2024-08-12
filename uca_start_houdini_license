@@ -1,3 +1,3 @@
 #!/bin/bash
-/Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver
-/Applications/Houdini/Houdini19.5.303/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
+/Applications/Houdini/Houdini20.5.278/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver
+/Applications/Houdini/Houdini20.5.278/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
