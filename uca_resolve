@@ -1,3 +1,22 @@
-sudo rm -rf /Applications/DaVinci\ Resolve 
-sudo installer -pkg /Applications/Install\ Resolve\ 18.0.4.pkg -target /Applications
-sudo rm /Applications/Install\ Resolve\ 18.0.4.pkg
+#!/bin/zsh
+
+#install Resolve
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+# download package
+
+curl http://ucahub/resolve.zip --output resolve.zip
+
+unzip /Users/Shared/deploy/resolve.zip
+
+# install
+
+sudo installer -pkg /Users/Shared/deploy/Install\ Resolve\ 18.5.pkg -target /Applications
+
+# cleanup
+
+rm /Users/Shared/deploy/Install\ Resolve\ 18.5.pkg
+rm /Users/Shared/deploy/resolve.zip
