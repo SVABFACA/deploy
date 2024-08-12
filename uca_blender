@@ -18,12 +18,12 @@ processor_type=$(uname -m)
 
 # Define the package paths for different architectures
 intel_package="/Users/Shared/deploy/blenderIntel.dmg"
-apple_silicon_package="/Users/Shared/deploy/blender.dmg"
+apple_silicon_package="/Users/Shared/deploy/blender/blender.dmg"
 
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
     echo "Intel processor detected. Installing Intel package..."
-    hdiutil attach /Users/Shared/deploy/blenderIntel.dmg
+    hdiutil attach /Users/Shared/deploy/blender/blenderIntel.dmg
     sudo cp -R /Volumes/Blender/Blender.app /Applications/
     hdiutil detach /Volumes/Blender
 elif [ "$processor_type" == "arm64" ]; then
