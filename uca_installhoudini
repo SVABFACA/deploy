@@ -1,11 +1,24 @@
 #!/bin/bash
 
+#install Houdini
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+#download archive
+curl http://ucahub/houdini.zip --output houdini.zip
+
+#unzip archive
+
+unzip /Users/Shared/deploy/houdini.zip
+
 # Determine the processor type
 processor_type=$(uname -m)
 
 # Define the package paths for different architectures
-intel_package="/path/to/intel/package.pkg"
-apple_silicon_package="/path/to/apple_silicon/package.pkg"
+intel_package="/Users/Shared/deploy/houdiniIntel.pkg"
+apple_silicon_package="/Users/Shared/deploy/houdini.pkg"
 
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
