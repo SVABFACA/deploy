@@ -16,12 +16,12 @@ unzip /Users/Shared/deploy/zbrush.zip
 
 #install
 
-sudo /Users/Shared/deploy/ZBrush_2023.2_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+sudo /Users/Shared/deploy/ZBrush_2024.0.4_Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
 
 #cleanup
 
 rm -rf /Users/Shared/deploy/__MACOSX
-rm -rf /Users/Shared/deploy/ZBrush_2023.2_Installer.app
+rm -rf /Users/Shared/deploy/ZBrush_2024.0.4_Installer.app
 rm /Users/Shared/deploy/zbrush.zip
 
 exit 0
