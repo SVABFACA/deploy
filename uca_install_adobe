@@ -2,16 +2,19 @@
 
 cd /Applications
 
-#download zip
-curl http://ucahub/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.zip --output adobe.zip
+# download zip
+curl http://10.8.9.89/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.zip --output adobe.zip
 
 # unzip package
 unzip /Applications/adobe.zip
 
-sudo installer -pkg /Applications/Adobe_SDL_AllApps_Enable_SS_Only_240723/Build/Adobe_SDL_AllApps_Enable_SS_Only_240723_Install.pkg -target /Applications
+# install
+
+sudo installer -pkg /Applications/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.pkg -target /Applications
 
 #cleanup
 rm /Applications/adobe.zip
-rm -r /Applications/Adobe_SDL_AllApps_Enable_SS_Only_240723/
 
 exit 0
+
+
