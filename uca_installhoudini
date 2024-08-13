@@ -7,7 +7,7 @@ chmod 777 /Users/Shared/deploy
 cd /Users/Shared/deploy
 
 #download archive
-curl http://ucahub/houdini.zip --output houdini.zip
+curl http://10.8.9.89/houdini.zip --output houdini.zip
 
 #unzip archive
 
@@ -17,20 +17,23 @@ unzip /Users/Shared/deploy/houdini.zip
 processor_type=$(uname -m)
 
 # Define the package paths for different architectures
-intel_package="/Users/Shared/deploy/houdiniIntel.pkg"
-apple_silicon_package="/Users/Shared/deploy/houdini.pkg"
+intel_package="/Users/Shared/deploy/houdini/houdiniIntel.pkg"
+apple_silicon_package="/Users/Shared/deploy/houdini/houdini.pkg"
 
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
-    echo "Intel processor detected. Installing Intel package..."
     sudo installer -pkg "$intel_package" -target /
 elif [ "$processor_type" == "arm64" ]; then
-    echo "Apple Silicon processor detected. Installing Apple Silicon package..."
     sudo installer -pkg "$apple_silicon_package" -target /
 else
     echo "Unknown processor type: $processor_type"
     exit 1
 fi
+
+#cleanup
+rm -rf /Users/Shared/deploy/__MACOSX
+rm -rf /Users/Shared/deploy/
+
 
 echo "Installation completed."
 exit 0
