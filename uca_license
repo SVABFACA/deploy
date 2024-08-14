@@ -36,6 +36,6 @@ zsh /Applications/Houdini/Houdini19.5.682/Frameworks/Houdini.framework/Versions/
 # Cinema 4D
 
 sudo rm /Applications/Maxon\ Cinema\ 4D\ 2024/resource/config.txt
-curl http://ucahub/config.txt --output /Applications/Maxon\ Cinema\ 4D\ 2023/resource/config.txt
+curl http://ucahub/config.txt --output /Applications/Maxon\ Cinema\ 4D\ 2024/resource/config.txt
 
 exit 0
