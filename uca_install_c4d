@@ -6,19 +6,22 @@ mkdir /Users/Shared/deploy
 chmod 777 /Users/Shared/deploy
 cd /Users/Shared/deploy
 
-#download DMG
-curl -O http://10.8.9.89/Cinema4D_2024_2024.5.1_Mac.dmg
+#download archive
+curl http://10.8.9.89/c4d.zip --output c4d.zip
 
-#mount
+#unzip archive
 
-hdiutil attach /Applications/Cinema4D_2024_2024.5.1_Mac.dmg
+unzip /Users/Shared/deploy/c4d.zip
 
 #install
 
-/Volumes/Maxon\ Cinema\ 4D/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+sudo /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
 
 #cleanup
 
-rm -rf /Users/Shared/deploy/
+rm -rf /Applications/__MACOSX
+rm -rf /Users/Shared/deploy/__MACOSX
+rm -rf /Users/Shared/deploy/Maxon\ Cinema\ 4D\ Installer.app
+rm /Users/Shared/deploy/c4d.zip
 
 exit 0
