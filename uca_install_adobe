@@ -14,6 +14,7 @@ sudo installer -pkg /Applications/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_
 
 #cleanup
 rm /Applications/adobe.zip
+rm /Applications/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.pkg
 
 exit 0
 
