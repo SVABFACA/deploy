@@ -13,7 +13,7 @@ hdiutil attach /Applications/Maxon_App_2023.3.0_Mac.dmg
 
 #install
 
-/Volumes/Maxon\ App\ Installer/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+/Volumes/Maxon\ App\ Installer/Maxon\ App\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
 
 #cleanup
 
