@@ -16,7 +16,7 @@ sudo /Volumes/Darwin/AdODIS-installer.app/Contents/MacOS/installbuilder.sh --mod
 
 hdiutil detach /Volumes/Darwin 
 
-curl http://ucahub/maya.zip --output maya.zip
+curl http://10.8.9.89/maya.zip --output maya.zip
 
 unzip /Users/Shared/deploy/maya.zip
 
