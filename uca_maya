@@ -20,12 +20,10 @@ curl http://ucahub/maya.zip --output maya.zip
 
 unzip /Users/Shared/deploy/maya.zip
 
-sudo /Users/Shared/deploy/maya/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
+sudo /Users/Shared/deploy/Install\ Maya\ 2025.app/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
 
 #cleanup
-rm -rf /Users/Shared/deploy/maya 
-rm /Users/Shared/deploy/maya.zip
-rm -r /Users/Shared/deploy/__MACOSX 
+rm -rf /Users/Shared/deploy/
 
 exit 0
 
