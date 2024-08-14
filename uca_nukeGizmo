@@ -8,7 +8,7 @@ curl http://10.8.9.89/nukeGizmo.zip --output nukeGizmo.zip
 
 # Set the source zip file and destination directory
 SOURCE_ZIP="nukeGizmo.zip"
-DEST_DIR="/Library/Application Support/Nuke/15.0/plugins"
+DEST_DIR="/Library/Application Support/Nuke/15.1/plugins"
 
 # Check if the source zip file exists
 if [ ! -f "$SOURCE_ZIP" ]; then
