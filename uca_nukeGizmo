@@ -1,0 +1,31 @@
+#!/bin/bash
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+curl http://10.8.9.89/nukeGizmo.zip --output nukeGizmo.zip
+
+# Set the source zip file and destination directory
+SOURCE_ZIP="nukeGizmo.zip"
+DEST_DIR="/Library/Application Support/Nuke/15.0/plugins"
+
+# Check if the source zip file exists
+if [ ! -f "$SOURCE_ZIP" ]; then
+    echo "Error: $SOURCE_ZIP not found"
+    exit 1
+fi
+
+# Create the destination directory if it doesn't exist
+mkdir -p "$DEST_DIR"
+
+# Unzip the file to the destination directory
+unzip -o "$SOURCE_ZIP" -d "$DEST_DIR"
+
+# Check if unzip was successful
+if [ $? -eq 0 ]; then
+    echo "Successfully unzipped $SOURCE_ZIP to $DEST_DIR"
+else
+    echo "Error: Failed to unzip $SOURCE_ZIP"
+    exit 1
+fi
