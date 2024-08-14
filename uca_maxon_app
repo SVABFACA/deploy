@@ -7,6 +7,7 @@ chmod 777 /Users/Shared/deploy
 cd /Users/Shared/deploy
 
 #download archive
+
 curl http://ucahub/maxonApp.zip --output maxonApp.zip
 
 #unzip archive
@@ -15,7 +16,7 @@ unzip /Users/Shared/deploy/maxonApp.zip
 
 #install
 
-/Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+/Users/Shared/deploy/Maxon\ App\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
 
 #cleanup
 
