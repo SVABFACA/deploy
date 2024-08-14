@@ -7,12 +7,12 @@ chmod 777 /Users/Shared/deploy
 cd /Users/Shared/deploy
 
 #download archive
-curl http://ucahub/redgiant.zip --output redgiant.zip
+
+curl http://10.8.9.89/redgiant.zip --output redgiant.zip
 
 #unzip archive
 
-unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/redgiant
-
+unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/sleep
 
 #install
 
@@ -21,10 +21,9 @@ zsh /Users/Shared/deploy/redgiant/Trapcode\ Suite\ Installer.app/Contents/Script
 zsh /Users/Shared/deploy/redgiant/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 zsh /Users/Shared/deploy/redgiant/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
-
 #cleanup
 
-# rm -rf /Users/Shared/deploy/redgiant
-# rm /Users/Shared/deploy/redgiant.zip
+rm -rf /Users/Shared/deploy
 
 exit 0
+
