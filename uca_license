@@ -1,7 +1,7 @@
 
 # Autodesk Maya
 
-sudo /Library/Application\ Support/Autodesk/AdskLicensing/Current/helper/AdskLicensingInstHelper change --prod_key 657Q1 --prod_ver 2025.2.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
+sudo /Library/Application\ Support/Autodesk/AdskLicensing/Current/helper/AdskLicensingInstHelper change --prod_key 657Q1 --prod_ver 2025.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
 
 
 # Foundry
@@ -22,12 +22,14 @@ echo "HOST ucalic ANY 27200" > /Library/Application\ Support/GenArts/rlm/mocha_c
 
 mkdir -p /Users/Shared/Maxon/RLM/
 touch /Users/Shared/Maxon/RLM/client.lic
-chmod 664 /Users/Shared/Maxon/RLM/client.lic
+/Users/Shared/Maxon/RLM/client.lic
 echo "HOST ucalic ANY 5053" > /Users/Shared/Maxon/RLM/client.lic
 
 # NeatVideo
 
-# echo "SERVER UCALIC ANY 2019" > \NeatVideo5 OFX 64\RLM
+touch /Library/Application\ Support/ABSoft/NeatVideo5-OFX/RLM/neatclient.lic
+chmod 664 /Library/Application\ Support/ABSoft/NeatVideo5-OFX/RLM/neatclient.lic
+echo "SERVER UCALIC ANY 2019" > /Library/Application\ Support/ABSoft/NeatVideo5-OFX/RLM/neatclient.lic
 
 # Houdini
 
