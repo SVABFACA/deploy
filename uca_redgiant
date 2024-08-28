@@ -8,18 +8,18 @@ cd /Users/Shared/deploy
 
 #download archive
 
-curl http://10.8.9.89/redgiant.zip --output redgiant.zip
+curl http://HOSTNAME/redgiant.zip --output redgiant.zip
 
 #unzip archive
 
-unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/sleep
+unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/
 
 #install
 
 sleep 5
-zsh /Users/Shared/deploy/redgiant/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/redgiant/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
-zsh /Users/Shared/deploy/redgiant/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/Trapcode\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/Universe\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
+zsh /Users/Shared/deploy/VFX\ Suite\ Installer.app/Contents/Scripts/install.sh --skipMaxonAppGui
 
 #cleanup
 
