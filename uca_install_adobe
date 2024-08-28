@@ -3,7 +3,7 @@
 cd /Applications
 
 # download zip
-curl http://10.8.9.89/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.zip --output adobe.zip
+curl http://HOSTNAME/Adobe_SDL_AllApps_Enable_SS_Only_240723_en_US_MACUNIVERSAL.zip --output adobe.zip
 
 # unzip package
 unzip /Applications/adobe.zip
