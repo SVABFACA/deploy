@@ -1,8 +1,7 @@
 
 # Autodesk Maya
 
-sudo /Library/Application\ Support/Autodesk/AdskLicensing/Current/helper/AdskLicensingInstHelper change --prod_key 657Q1 --prod_ver 2025.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
-
+sudo /Library/Application\ Support/Autodesk/AdskLicensing/Current/helper/AdskLicensingInstHelper change --prod_key 657R1 --prod_ver 2026.0.0.F --lic_method NETWORK --lic_server_type SINGLE --lic_servers "10.8.8.23"
 
 # Foundry
  
