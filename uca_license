@@ -32,11 +32,11 @@ echo "SERVER UCALIC ANY 2019" > /Library/Application\ Support/ABSoft/NeatVideo5-
 
 # Houdini
 
-zsh /Applications/Houdini/Houdini19.5.682/Frameworks/Houdini.framework/Versions/19.5/Resources/bin/hserver -S ucalic
+zsh /Applications/Houdini/Houdini21.5.682/Frameworks/Houdini.framework/Versions/21.5/Resources/bin/hserver -S ucalic
 
 # Cinema 4D
 
-sudo rm /Applications/Maxon\ Cinema\ 4D\ 2024/resource/config.txt
-curl http://ucahub/config.txt --output /Applications/Maxon\ Cinema\ 4D\ 2024/resource/config.txt
+sudo rm /Applications/Maxon\ Cinema\ 4D\ 2025/resource/config.txt
+curl http://ucahub/config.txt --output /Applications/Maxon\ Cinema\ 4D\ 2025/resource/config.txt
 
 exit 0
