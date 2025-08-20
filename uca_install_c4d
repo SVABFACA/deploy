@@ -17,7 +17,7 @@ hdiutil attach "$DMG_NAME"
 sleep 3
 
 # Run the silent installer inside the mounted volume
-INSTALLER_NAME="Cinema 4D 2025.3.3 Installer.app"
+INSTALLER_NAME="Cinema 4D Installer.app"
 sudo "$MOUNT_POINT/$INSTALLER_NAME/Contents/MacOS/installbuilder.sh" --mode unattended --unattendedmodeui none
 
 # Unmount the DMG
