@@ -3,7 +3,7 @@
 # Set variables 
 C4D_DMG_URL="https://mx-app-blob-prod.maxon.net/mx-package-production/installer/macos/maxon/cinema4d/releases/2025.3.3/Cinema4D_2025_2025.3.3_Mac.dmg"
 DMG_NAME="Cinema4D_2025.3.3.dmg"
-MOUNT_POINT="/Volumes/Cinema4D"
+MOUNT_POINT="/Volumes/Maxon Cinema 4D"
 
 # Download the installer DMG
 echo "Downloading Cinema 4D 2025.3.3 installer..."
@@ -17,7 +17,7 @@ hdiutil attach "$DMG_NAME"
 sleep 3
 
 # Run the silent installer inside the mounted volume
-INSTALLER_NAME="Cinema 4D Installer.app"
+INSTALLER_NAME="Maxon Cinema 4D Installer.app"
 sudo "$MOUNT_POINT/$INSTALLER_NAME/Contents/MacOS/installbuilder.sh" --mode unattended --unattendedmodeui none
 
 # Unmount the DMG
@@ -25,3 +25,4 @@ hdiutil detach "$MOUNT_POINT"
 
 # Remove the downloaded DMG
 rm "$DMG_NAME"
+
