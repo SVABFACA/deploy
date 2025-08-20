@@ -17,8 +17,8 @@ unzip /Users/Shared/deploy/redgiant.zip -d /Users/Shared/deploy/
 #install
 
 sleep 5
-zsh /Users/Shared/deploy//Red\ Giant\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
-zsh /Users/Shared/deploy/Universe\ Installer.app/Contents/MacOS/installbuilder.sh --mode unattended --unattendedmodeui none
+"/Users/Shared/deploy//Red\ Giant\ Installer.app/Contents/MacOS/installbuilder.sh" --mode unattended --unattendedmodeui none
+"/Users/Shared/deploy/Universe\ Installer.app/Contents/MacOS/installbuilder.sh" --mode unattended --unattendedmodeui none
 #cleanup
 
 rm -rf /Users/Shared/deploy
