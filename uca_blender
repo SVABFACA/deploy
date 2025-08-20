@@ -16,26 +16,18 @@ unzip /Users/Shared/deploy/blender.zip
 processor_type=$(uname -m)
 
 # Define the package paths for different architectures
-intel_package="/Users/Shared/deploy/blenderIntel.dmg"
-apple_silicon_package="/Users/Shared/deploy/blender.dmg"
+intel_package="/Users/Shared/deploy/blender/intel/Blender.app"
+apple_silicon_package="/Users/Shared/deploy/blender/apple/Blender.app"
 
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
-    hdiutil attach /Users/Shared/deploy/blenderIntel.dmg
-    sudo mv /Volumes/Blender/Blender.app /Applications/
-    hdiutil detach /Volumes/Blender
+    sudo mv /Users/Shared/deploy/blender/intel/Blender.app /Applications/
 elif [ "$processor_type" == "arm64" ]; then
-    hdiutil attach /Users/Shared/deploy/blender.dmg
-    sudo mv /Volumes/Blender.app /Applications/
-    hdiutil detach /Volumes/Blender
+    sudo mv /Users/Shared/deploy/blender/apple/Blender.app /Applications/
 else
     echo "Unknown processor type: $processor_type"
     exit 1
 fi
-
-#cleanup
-rm -rf /Users/Shared/deploy/__MACOSX
-rm -rf /Users/Shared/deploy/
 
 echo "Installation completed."
 exit 0
