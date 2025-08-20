@@ -20,7 +20,7 @@ curl http://10.8.9.89/maya.zip --output maya.zip
 
 unzip /Users/Shared/deploy/maya.zip
 
-sudo /Users/Shared/deploy/Install\ Maya\ 2025.app/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
+sudo /Users/Shared/deploy/Install\ Maya\ 2026.app/Contents/Helper/setup.app/Contents/MacOS/Setup --silent
 
 #cleanup
 rm -rf /Users/Shared/deploy/
