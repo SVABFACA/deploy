@@ -1,0 +1,26 @@
+#!/bin/zsh
+
+#install Wacom Drivers
+
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+#download archive
+curl http://10.8.9.89/wacom.zip --output wacom.zip
+
+#unzip archive
+
+unzip /Users/Shared/deploy/wacom.zip
+
+#install
+
+sudo installer -pkg /Users/Shared/deploy/wacom.pkg -target /
+
+#cleanup
+
+rm -f /Users/Shared/deploy/wacom.zip
+rm -f /Users/Shared/deploy/wacom.pkg
+rm -rf /Users/Shared/deploy/__MACOSX
+
+exit 0
