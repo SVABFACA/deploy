@@ -22,11 +22,11 @@ apple_silicon_package="/Users/Shared/deploy/blender.dmg"
 # Check the processor type and install the appropriate package
 if [ "$processor_type" == "x86_64" ]; then
     hdiutil attach /Users/Shared/deploy/blenderIntel.dmg
-    sudo mv -R /Volumes/Blender/Blender.app /Applications/
+    sudo mv /Volumes/Blender/Blender.app /Applications/
     hdiutil detach /Volumes/Blender
 elif [ "$processor_type" == "arm64" ]; then
     hdiutil attach /Users/Shared/deploy/blender.dmg
-    sudo mv -R /Volumes/Blender.app /Applications/
+    sudo mv /Volumes/Blender.app /Applications/
     hdiutil detach /Volumes/Blender
 else
     echo "Unknown processor type: $processor_type"
