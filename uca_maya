@@ -8,13 +8,15 @@ cd /Users/Shared/deploy
 
 #download zip
 
-curl https://emsfs.autodesk.com/utility/odis/1/installer/latest/Darwin.dmg
+curl https://10.8.9.89/odis.zip --output odis.zip
 
-hdiutil attach Darwin.dmg
+unzip /Users/Shared/deploy/odis.zip
 
-sudo /Volumes/Darwin/AdODIS-installer.app/Contents/MacOS/installbuilder.sh --mode unattended
+sudo xattr -r -d com.apple.quarantine /Users/Shared/deploy/AdODIS-installer.app
 
-hdiutil detach /Volumes/Darwin 
+sudo chmod +x /Users/Shared/deploy/AdODIS-installer.app/Contents/MacOS/installbuilder.sh 
+
+sudo /Users/Shared/deploy/AdODIS-installer.app/Contents/MacOS/installbuilder.sh --mode unattended
 
 curl http://10.8.9.89/maya.zip --output maya.zip
 
@@ -26,4 +28,3 @@ sudo /Users/Shared/deploy/Install\ Maya\ 2026.app/Contents/Helper/setup.app/Cont
 rm -rf /Users/Shared/deploy/
 
 exit 0
-
