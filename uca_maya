@@ -8,16 +8,6 @@ cd /Users/Shared/deploy
 
 #download zip
 
-curl https://10.8.9.89/odis.zip --output odis.zip
-
-unzip /Users/Shared/deploy/odis.zip
-
-sudo xattr -r -d com.apple.quarantine /Users/Shared/deploy/AdODIS-installer.app
-
-sudo chmod +x /Users/Shared/deploy/AdODIS-installer.app/Contents/MacOS/installbuilder.sh 
-
-sudo /Users/Shared/deploy/AdODIS-installer.app/Contents/MacOS/installbuilder.sh --mode unattended
-
 curl http://10.8.9.89/maya.zip --output maya.zip
 
 unzip /Users/Shared/deploy/maya.zip
