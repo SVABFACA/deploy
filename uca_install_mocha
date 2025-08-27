@@ -14,7 +14,7 @@ unzip /Users/Shared/deploy/mocha.zip
 
 # install
 
-cp -R /Users/Shared/deploy/mocha/Mocha\ Pro\ 2025.5.app /Applications/
+sudo cp -Rf "/Users/Shared/deploy/Mocha Pro 2025.5.app" /Applications
 sudo installer -pkg /Users/Shared/deploy/mocha/MochaPro2025.5-Adobe.pkg -target /
 sudo installer -pkg /Users/Shared/deploy/mocha/MochaPro2025.5-OFX.pkg -target /
 
