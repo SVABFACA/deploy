@@ -3,9 +3,7 @@ do
 lpadmin -x $printer
 done
 
-curl http://10.8.9.89/hp.ppd --output /Library/Printers/PPDs/Contents/Resources/hp.ppd
-
-lpadmin -p "HP_OfficeJet_M651" -L "2 FL" -E -v ipp://172.21.8.16/ipp/print -P /Library/Printers/PPDs/Contents/Resources/hp.ppd -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -u allow:all
+lpadmin -p "HP_OfficeJet_M651" -L "2 FL" -E -v ipp://172.21.8.16/ipp/print -P /Library/Printers/PPDs/Contents/Resources/HP\ Color\ LaserJet\ M651.gz -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -u allow:all
 
 # Enable all printers
 #cupsenable "HP OfficeJet M651"
