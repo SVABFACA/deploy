@@ -1,11 +1,23 @@
+#remove all printers 
+
 for printer in `lpstat -p | awk '{print $2}'`
 do
 lpadmin -x $printer
 done
 
+mkdir /Users/Shared/deploy
+chmod 777 /Users/Shared/deploy
+cd /Users/Shared/deploy
+
+#download archive
+curl http://ucahub/hp.zip --output hp.zip
+
+unzip -q hp.zip
+
+#install HP software
+
+sudo installer -pkg /Users/Shared/deploy/hp-printer-essentials-UniPS-6_3_0_1.pkg -target /
+
+#add printer
+
 lpadmin -p "HP_OfficeJet_M651" -L "2 FL" -E -v ipp://172.21.8.16/ipp/print -P /Library/Printers/PPDs/Contents/Resources/HP\ Color\ LaserJet\ M651.gz -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -u allow:all
-
-# Enable all printers
-#cupsenable "HP OfficeJet M651"
-
-exit 0
