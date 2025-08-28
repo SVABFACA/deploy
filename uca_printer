@@ -5,9 +5,9 @@ done
 
 curl http://10.8.9.89/hp-color_laserjet_m651-ps.ppd.gz --output /Library/Printers/PPDs/Contents/Resources/hp-color_laserjet_m651-ps.ppd.gz
 
-lpadmin -p "HPofficeJetM651" -L "2 FL" -E -v lpd://[HP_IP_1] -P /Library/Printers/PPDs/Contents/Resources/hp-color_laserjet_m651-ps.ppd.gz -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -L 2FL -u allow:all -E
+lpadmin -p "HP OfficeJet M651" -L "2 FL" -E -v 172.21.8.16 -P /Library/Printers/PPDs/Contents/Resources/hp-color_laserjet_m651-ps.ppd.gz -o HPOptionDuplexer=True -o printer-is-shared=false -o cupsIPPSupplies=true -o auth-info-required=none -u allow:all
 
 # Enable all printers
-cupsenable HPofficeJetM651
+#cupsenable "HP OfficeJet M651"
 
 exit 0
