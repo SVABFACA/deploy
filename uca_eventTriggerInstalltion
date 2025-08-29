@@ -1,0 +1,43 @@
+#!/bin/bash
+
+
+# List of applications and their corresponding policy names
+apps=(
+    "/Applications/Utilities/Adobe Creative Cloud/Utils/Creative Cloud Desktop App.app:adobecc"
+    "/Applications/blender.app:Blender"
+    "/Applications/Wacom Tablet.localized/Wacom Center.app:wacom"
+    "/Applications/Maxon.app:maxonapp"
+)
+
+# Loop through the list of applications
+for item in "${apps[@]}"; do
+    # Split the item into app path and policy name
+    IFS=":" read -r app_path policy_name <<< "$item"
+
+    # Initialize attempt counter
+    attempt=1
+
+    # Try up to 3 times to check/install the app
+    while [ $attempt -le 3 ]; do
+        if [ -d "$app_path" ]; then
+            echo "$(date "+%Y-%m-%d %H:%M:%S"): $app_path installed, skipping retry..."
+            break # Exit the loop if the app is installed
+        else
+            echo "$(date "+%Y-%m-%d %H:%M:%S"): Attempt $attempt - $app_path is missing, attempting another install"
+            echo "$(date "+%Y-%m-%d %H:%M:%S"): Download begun for $policy_name"
+            jamf policy -event "$policy_name"
+            echo "$(date "+%Y-%m-%d %H:%M:%S"): Download and install attempt for $policy_name completed"
+            # Increase the attempt counter
+            ((attempt++))
+        fi
+
+        # Short delay before next attempt (optional, adjust as needed)
+        sleep 120
+    done
+
+    if [ $attempt -gt 3 ] && [ ! -d "$app_path" ]; then
+        echo "$(date "+%Y-%m-%d %H:%M:%S"): After 3 attempts, $app_path could not be installed."
+    fi
+done
+
+### End Sleep
